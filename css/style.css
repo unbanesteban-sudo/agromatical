@@ -2063,13 +2063,30 @@ ul {
 }
 
 .login-lado-logo {
-  background: linear-gradient(160deg, #1f4a28 0%, #2e6b34 100%);
+  position: relative;
+  background: #16301b;
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 48px;
-  padding: 56px 64px;
+  justify-content: flex-end;
+  gap: 36px;
+  padding: 48px 64px;
+}
+
+.login-lado-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background:
+    linear-gradient(0deg, #16301b 0%, rgba(22, 48, 27, 0) 40%),
+    url("../assets/login-invernadero.jpg") 55% 75% / cover no-repeat;
+}
+
+.login-lado-logo > * {
+  position: relative;
 }
 
 .login-marca svg {
