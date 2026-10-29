@@ -1,40 +1,47 @@
 // Lo explica: Ailin
-// Chicos, estos son los dibujitos del clima (sol, nubes, lluvia, etc.). Están hechos
-// en SVG, que es un dibujo hecho con código, así no dependemos de imágenes.
+// Chicos, estos íconos del clima los dibujamos nosotros en SVG (un dibujo hecho con código).
+// Todos usan los mismos colores y el mismo grosor de línea, así se ven como un solo juego.
 
-var SOL = '<circle cx="50" cy="50" r="20" fill="#f5a623"/>' +
-  '<g stroke="#f5a623" stroke-width="6" stroke-linecap="round">' +
-  '<line x1="50" y1="10" x2="50" y2="20"/><line x1="50" y1="80" x2="50" y2="90"/>' +
-  '<line x1="10" y1="50" x2="20" y2="50"/><line x1="80" y1="50" x2="90" y2="50"/>' +
-  '<line x1="22" y1="22" x2="29" y2="29"/><line x1="71" y1="71" x2="78" y2="78"/>' +
-  '<line x1="22" y1="78" x2="29" y2="71"/><line x1="71" y1="29" x2="78" y2="22"/></g>';
+var SOL = '<g stroke="#f4b73c" stroke-width="4" stroke-linecap="round">' +
+  '<line x1="49" y1="32" x2="55" y2="32"/><line x1="44" y1="44" x2="48.3" y2="48.3"/>' +
+  '<line x1="32" y1="49" x2="32" y2="55"/><line x1="20" y1="44" x2="15.7" y2="48.3"/>' +
+  '<line x1="15" y1="32" x2="9" y2="32"/><line x1="20" y1="20" x2="15.7" y2="15.7"/>' +
+  '<line x1="32" y1="15" x2="32" y2="9"/><line x1="44" y1="20" x2="48.3" y2="15.7"/></g>' +
+  '<circle cx="32" cy="32" r="11" fill="#f9cf5c" stroke="#e8a521" stroke-width="2.5"/>';
 
-var SOL_CHICO = '<circle cx="36" cy="36" r="16" fill="#f5a623"/>';
+var SOL_CHICO = '<g stroke="#f4b73c" stroke-width="3.5" stroke-linecap="round">' +
+  '<line x1="24" y1="10" x2="24" y2="5"/><line x1="14" y1="14" x2="10.5" y2="10.5"/>' +
+  '<line x1="10" y1="24" x2="5" y2="24"/><line x1="34" y1="14" x2="37.5" y2="10.5"/>' +
+  '<line x1="14" y1="34" x2="10.5" y2="37.5"/></g>' +
+  '<circle cx="24" cy="24" r="9.5" fill="#f9cf5c" stroke="#e8a521" stroke-width="2.5"/>';
 
-var NUBE = '<g fill="#aeb5bd"><circle cx="38" cy="58" r="16"/><circle cx="58" cy="50" r="20"/>' +
-  '<circle cx="74" cy="62" r="12"/><rect x="26" y="58" width="56" height="16" rx="8"/></g>';
+var NUBE_CHICA = '<path d="M27 53h21a8.5 8.5 0 0 0 1.4-16.9A11.5 11.5 0 0 0 28.2 33.4 9.8 9.8 0 0 0 27 53z" fill="#f1f4f1" stroke="#8e9a93" stroke-width="2.5" stroke-linejoin="round"/>';
 
-var GOTAS = '<g stroke="#4a90d9" stroke-width="4" stroke-linecap="round">' +
-  '<line x1="38" y1="82" x2="34" y2="94"/><line x1="54" y1="82" x2="50" y2="94"/><line x1="70" y1="82" x2="66" y2="94"/></g>';
+var NUBE = '<path d="M21 50h25a10 10 0 0 0 1.6-19.9A13.5 13.5 0 0 0 22.4 27.4 11.3 11.3 0 0 0 21 50z" fill="#f1f4f1" stroke="#8e9a93" stroke-width="2.5" stroke-linejoin="round"/>';
 
-var RAYO = '<polygon points="52,70 44,86 54,86 48,98 64,80 54,80 60,70" fill="#f5c542"/>';
+var NUBE_ARRIBA = '<path d="M21 40h25a10 10 0 0 0 1.6-19.9A13.5 13.5 0 0 0 22.4 17.4 11.3 11.3 0 0 0 21 40z" fill="#f1f4f1" stroke="#8e9a93" stroke-width="2.5" stroke-linejoin="round"/>';
 
-var COPOS = '<g fill="#bcd6ef"><circle cx="38" cy="88" r="4"/><circle cx="54" cy="94" r="4"/><circle cx="70" cy="88" r="4"/></g>';
+var GOTAS = '<g stroke="#3b8fd0" stroke-width="3.5" stroke-linecap="round">' +
+  '<line x1="24" y1="47" x2="21" y2="55"/><line x1="34" y1="47" x2="31" y2="55"/><line x1="44" y1="47" x2="41" y2="55"/></g>';
+
+var RAYO = '<path d="M35 42l-7 10h6l-3 9 10-13h-6l3-6z" fill="#f4b73c" stroke="#e8a521" stroke-width="1.5" stroke-linejoin="round"/>';
+
+var COPOS = '<g fill="#8fbfe6"><circle cx="23" cy="50" r="2.8"/><circle cx="33" cy="55" r="2.8"/><circle cx="43" cy="50" r="2.8"/></g>';
 
 function dibujoDelClima(descripcion) {
   var texto = (descripcion || "").toLowerCase();
 
   if (texto.indexOf("tormenta") !== -1) {
-    return NUBE + RAYO;
+    return NUBE_ARRIBA + RAYO;
   }
   if (texto.indexOf("lluvia") !== -1 || texto.indexOf("llovizna") !== -1 || texto.indexOf("chubasco") !== -1) {
-    return NUBE + GOTAS;
+    return NUBE_ARRIBA + GOTAS;
   }
   if (texto.indexOf("nieve") !== -1 || texto.indexOf("nevada") !== -1) {
-    return NUBE + COPOS;
+    return NUBE_ARRIBA + COPOS;
   }
-  if (texto.indexOf("parcial") !== -1) {
-    return SOL_CHICO + NUBE;
+  if (texto.indexOf("parcial") !== -1 || texto.indexOf("mayormente") !== -1) {
+    return SOL_CHICO + NUBE_CHICA;
   }
   if (texto.indexOf("despejado") !== -1) {
     return SOL;
@@ -42,9 +49,9 @@ function dibujoDelClima(descripcion) {
   if (texto.indexOf("nublado") !== -1) {
     return NUBE;
   }
-  return SOL_CHICO + NUBE;
+  return SOL_CHICO + NUBE_CHICA;
 }
 
 function iconoDelClima(descripcion) {
-  return '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' + dibujoDelClima(descripcion) + '</svg>';
+  return '<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">' + dibujoDelClima(descripcion) + '</svg>';
 }

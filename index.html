@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agromatical — Cuidado de invernaderos</title>
   <meta name="description" content="Agromatical, tecnología para cuidar tu invernadero.">
-  <link rel="icon" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -20,7 +20,7 @@
   <header class="site-header">
     <div class="container header-bar">
       <a href="index.html" class="brand">
-        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="brand-marca" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M4.5 27V14.5L16 6l11.5 8.5V27" fill="#eef5ea" stroke="#2e6b34" stroke-width="2.2" stroke-linejoin="round"/><path d="M2.5 27h27" stroke="#2e6b34" stroke-width="2.2" stroke-linecap="round"/><path d="M16 27v-8" stroke="#2e6b34" stroke-width="2" stroke-linecap="round"/><path d="M16 21c-4 0-6.2-2.4-6.2-6 4 0 6.2 2.4 6.2 6z" fill="#7fb069"/><path d="M16 19c0-4 2.4-6.6 6.4-6.6 0 4-2.4 6.6-6.4 6.6z" fill="#2e6b34"/></svg>
         <span class="brand-name"><strong>Agro</strong>matical</span>
       </a>
 
@@ -92,7 +92,7 @@
         <h2 class="section-title" id="tituloInvernadero" style="display:none;">Tu invernadero</h2>
 
         <div class="invernadero-cta" id="invernaderoCta">
-          <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="cta-marca" width="52" height="52" viewBox="0 0 32 32" aria-hidden="true"><path d="M4.5 27V14.5L16 6l11.5 8.5V27" fill="#eef5ea" stroke="#2e6b34" stroke-width="2.2" stroke-linejoin="round"/><path d="M2.5 27h27" stroke="#2e6b34" stroke-width="2.2" stroke-linecap="round"/><path d="M16 27v-8" stroke="#2e6b34" stroke-width="2" stroke-linecap="round"/><path d="M16 21c-4 0-6.2-2.4-6.2-6 4 0 6.2 2.4 6.2 6z" fill="#7fb069"/><path d="M16 19c0-4 2.4-6.6 6.4-6.6 0 4-2.4 6.6-6.4 6.6z" fill="#2e6b34"/></svg>
           <div class="cta-texto">
             <h2>Tu invernadero</h2>
             <p>Monitoreá el clima, cuidá tus cultivos y llevá tu producción al siguiente nivel.</p>
@@ -116,17 +116,17 @@
 
             <div class="sensores-kpis">
               <div class="kpi">
-                <span class="kpi-nombre">Temperatura</span>
+                <span class="kpi-nombre"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"/><path d="M12 9v7"/></svg>Temperatura</span>
                 <strong><span id="sensorTemp">--</span> °C</strong>
                 <small class="kpi-nota" id="sensorTempNota"></small>
               </div>
               <div class="kpi">
-                <span class="kpi-nombre">Humedad</span>
+                <span class="kpi-nombre"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/></svg>Humedad</span>
                 <strong><span id="sensorHum">--</span> %</strong>
                 <small class="kpi-nota">&nbsp;</small>
               </div>
               <div class="kpi">
-                <span class="kpi-nombre">Luminosidad</span>
+                <span class="kpi-nombre"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>Luminosidad</span>
                 <strong><span id="sensorLuz">--</span></strong>
                 <small class="kpi-nota" id="sensorLuzNota"></small>
               </div>
@@ -180,7 +180,7 @@
 
         <div class="chat-invernadero" id="chatInvernadero" style="display:none;">
           <div class="chat-inv-header">
-            <img src="assets/logo-icono.png" alt="" class="chat-inv-avatar">
+            <span class="chat-inv-avatar"><svg class="" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><path d="M4.5 27V14.5L16 6l11.5 8.5V27" fill="#eef5ea" stroke="#2e6b34" stroke-width="2.2" stroke-linejoin="round"/><path d="M2.5 27h27" stroke="#2e6b34" stroke-width="2.2" stroke-linecap="round"/><path d="M16 27v-8" stroke="#2e6b34" stroke-width="2" stroke-linecap="round"/><path d="M16 21c-4 0-6.2-2.4-6.2-6 4 0 6.2 2.4 6.2 6z" fill="#7fb069"/><path d="M16 19c0-4 2.4-6.6 6.4-6.6 0 4-2.4 6.6-6.4 6.6z" fill="#2e6b34"/></svg></span>
             <div>
               <strong>AgrIA</strong>
               <span>Tu asistente para el invernadero</span>
@@ -209,7 +209,7 @@
         <div class="quick-links">
           <a class="quick-link-card" href="pronostico.html">
             <div class="quick-link-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17a4 4 0 0 1 0-8 5.5 5.5 0 0 1 10.8 1.2A3.7 3.7 0 0 1 17 17H7Z" fill="currentColor"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/></svg>
             </div>
             <h3>Pronóstico extendido</h3>
             <p>Los próximos 7 días con consejos de riego.</p>
@@ -217,7 +217,7 @@
 
           <a class="quick-link-card" href="mapa.html">
             <div class="quick-link-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c-4 0-7 3.1-7 7 0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z" fill="currentColor"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
             </div>
             <h3>Mapa interactivo</h3>
             <p>Ubicación y temperatura en tiempo real (Open-Meteo).</p>
@@ -225,7 +225,7 @@
 
           <a class="quick-link-card" href="#tu-invernadero">
             <div class="quick-link-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20C4 10 10 4 20 4c0 10-6 16-16 16z" fill="currentColor"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5V10.5L12 4l8.5 6.5v10"/><path d="M2 20.5h20M12 20.5v-5"/><path d="M12 17c-2.6 0-4-1.5-4-3.8 2.6 0 4 1.5 4 3.8zM12 15.5c0-2.6 1.6-4.3 4.2-4.3 0 2.6-1.6 4.3-4.2 4.3z"/></svg>
             </div>
             <h3>Tu invernadero</h3>
             <p>Datos de adentro, horarios de riego y el chat con AgrIA.</p>
@@ -262,7 +262,7 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <svg class="brand-marca" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M4.5 27V14.5L16 6l11.5 8.5V27" fill="#eef5ea" stroke="#2e6b34" stroke-width="2.2" stroke-linejoin="round"/><path d="M2.5 27h27" stroke="#2e6b34" stroke-width="2.2" stroke-linecap="round"/><path d="M16 27v-8" stroke="#2e6b34" stroke-width="2" stroke-linecap="round"/><path d="M16 21c-4 0-6.2-2.4-6.2-6 4 0 6.2 2.4 6.2 6z" fill="#7fb069"/><path d="M16 19c0-4 2.4-6.6 6.4-6.6 0 4-2.4 6.6-6.4 6.6z" fill="#2e6b34"/></svg>
         <span class="brand-name"><strong>Agro</strong>matical</span>
       </div>
       <p class="footer-tagline">Tecnología que cultiva el futuro</p>
