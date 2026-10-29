@@ -8,17 +8,16 @@
    6. SECCIONES Y TÍTULOS
    7. INICIO: ACCESOS RÁPIDOS (las 3 tarjetas)
    8. INVERNADERO (todo lo de "Tu invernadero" en el inicio)
-   9. INICIO: NOVEDADES DEL PROYECTO
-   10. FOTO DE ARRIBA EN CADA PÁGINA (Pronóstico, Mapa, Nosotros, Contacto)
-   11. AJUSTES CHICOS (espacios entre secciones y el mapa grande)
-   12. AgrIA (botón redondo y ventana del chat)
-   13. FORMULARIOS (Contacto, y los campos de la ventana del invernadero)
-   14. FOOTER (pie de página)
-   15. CELULAR Y TABLET (cómo se acomoda el inicio y el menú en pantallas chicas)
-   16. PÁGINA PRONÓSTICO (los 7 días)
-   17. PÁGINA NOSOTROS (proyecto y equipo)
-   18. LOGIN (pantalla para entrar o crear cuenta)
-   19. USUARIO EN EL HEADER (nombre y botón Salir)
+   9. FOTO DE ARRIBA EN CADA PÁGINA (Pronóstico, Mapa, Nosotros, Contacto)
+   10. AJUSTES CHICOS (espacios entre secciones y el mapa grande)
+   11. AgrIA (botón redondo y ventana del chat)
+   12. FORMULARIOS (Contacto, y los campos de la ventana del invernadero)
+   13. FOOTER (pie de página)
+   14. CELULAR Y TABLET (cómo se acomoda el inicio y el menú en pantallas chicas)
+   15. PÁGINA PRONÓSTICO (los 7 días)
+   16. PÁGINA NOSOTROS (proyecto y equipo)
+   17. LOGIN (pantalla para entrar o crear cuenta)
+   18. USUARIO EN EL HEADER (nombre y botón Salir)
 */
 
 /* ==========================================================
@@ -911,7 +910,7 @@ ul {
   border-style: dashed;
 }
 
-/* ----- 8.12 Datos del servidor del profe (adentro del invernadero) ----- */
+/* ----- 8.10 Datos del servidor del profe (adentro del invernadero) ----- */
 
 .sensores {
   padding: 18px 20px;
@@ -1119,7 +1118,7 @@ ul {
   }
 }
 
-/* ----- 8.10 Botón para descargar la planilla de riego (Excel) ----- */
+/* ----- 8.11 Botón para descargar la planilla de riego (Excel) ----- */
 
 .btn-planilla {
   margin-top: 14px;
@@ -1142,7 +1141,7 @@ ul {
   background: var(--color-primary-soft);
 }
 
-/* ----- 8.11 Chat con AgrIA abajo del invernadero ----- */
+/* ----- 8.12 Chat con AgrIA abajo del invernadero ----- */
 
 .chat-invernadero {
   margin-top: 24px;
@@ -1283,39 +1282,7 @@ ul {
 }
 
 /* ==========================================================
-   9. INICIO: NOVEDADES DEL PROYECTO
-   ========================================================== */
-
-.updates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.update-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  padding: 22px;
-}
-
-.update-card time {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
-  background: var(--color-primary-soft);
-  padding: 4px 10px;
-  border-radius: 999px;
-}
-
-.update-card h3 {
-  font-size: 1.05rem;
-  margin: 12px 0 0;
-}
-
-/* ==========================================================
-   10. FOTO DE ARRIBA EN CADA PÁGINA (Pronóstico, Mapa, Nosotros, Contacto)
+   9. FOTO DE ARRIBA EN CADA PÁGINA (Pronóstico, Mapa, Nosotros, Contacto)
    ========================================================== */
 
 .page-header {
@@ -1340,15 +1307,11 @@ ul {
 }
 
 /* ==========================================================
-   11. AJUSTES CHICOS (espacios entre secciones y el mapa grande)
+   10. AJUSTES CHICOS (espacios entre secciones y el mapa grande)
    ========================================================== */
 
 .section-sin-abajo {
   padding-bottom: 0;
-}
-
-.section-sin-arriba {
-  padding-top: 0;
 }
 
 .mapa-grande {
@@ -1362,7 +1325,7 @@ ul {
 }
 
 /* ==========================================================
-   12. AgrIA (botón redondo y ventana del chat)
+   11. AgrIA (botón redondo y ventana del chat)
    ========================================================== */
 
 .ia-widget-toggle {
@@ -1516,7 +1479,7 @@ ul {
   background: var(--color-text);
 }
 
-/* ----- 12.1 AgrIA en celular ----- */
+/* ----- 11.1 AgrIA en celular ----- */
 
 @media (max-width: 480px) {
   .ia-panel {
@@ -1533,7 +1496,7 @@ ul {
 }
 
 /* ==========================================================
-   13. FORMULARIOS (Contacto, y los campos de la ventana del invernadero)
+   12. FORMULARIOS (Contacto, y los campos de la ventana del invernadero)
    ========================================================== */
 
 .contact-form {
@@ -1600,7 +1563,7 @@ ul {
 }
 
 /* ==========================================================
-   14. FOOTER (pie de página)
+   13. FOOTER (pie de página)
    ========================================================== */
 
 .site-footer {
@@ -1669,7 +1632,7 @@ ul {
 }
 
 /* ==========================================================
-   15. CELULAR Y TABLET (cómo se acomoda el inicio y el menú en pantallas chicas)
+   14. CELULAR Y TABLET (cómo se acomoda el inicio y el menú en pantallas chicas)
    ========================================================== */
 
 @media (max-width: 860px) {
@@ -1771,7 +1734,7 @@ ul {
 }
 
 /* ==========================================================
-   16. PÁGINA PRONÓSTICO (los 7 días)
+   15. PÁGINA PRONÓSTICO (los 7 días)
    ========================================================== */
 
 .pronostico-top {
@@ -1793,7 +1756,7 @@ ul {
   color: var(--color-text-muted);
 }
 
-/* ----- 16.1 Grilla de tarjetas (7 en compu, 4 en tablet, 2 en celular) ----- */
+/* ----- 15.1 Grilla de tarjetas (7 en compu, 4 en tablet, 2 en celular) ----- */
 
 .pronostico-grid {
   display: grid;
@@ -1813,7 +1776,7 @@ ul {
   }
 }
 
-/* ----- 16.2 Tarjeta de cada día ----- */
+/* ----- 15.2 Tarjeta de cada día ----- */
 
 .dia-card {
   background: var(--color-surface);
@@ -1908,7 +1871,7 @@ ul {
   line-height: 1.4;
 }
 
-/* ----- 16.3 Colores del consejo de cada día ----- */
+/* ----- 15.3 Colores del consejo de cada día ----- */
 
 .consejo-normal {
   background: #eaf6ec;
@@ -1941,7 +1904,7 @@ ul {
 }
 
 /* ==========================================================
-   17. PÁGINA NOSOTROS (proyecto y equipo)
+   16. PÁGINA NOSOTROS (proyecto y equipo)
    ========================================================== */
 
 .sobre-proyecto {
@@ -1955,7 +1918,7 @@ ul {
   line-height: 1.7;
 }
 
-/* ----- 17.1 Grilla del equipo (3 en compu, 2 en tablet, 1 en celular) ----- */
+/* ----- 16.1 Grilla del equipo (3 en compu, 2 en tablet, 1 en celular) ----- */
 
 .equipo-grid {
   display: grid;
@@ -1975,7 +1938,7 @@ ul {
   }
 }
 
-/* ----- 17.2 Tarjeta de cada integrante ----- */
+/* ----- 16.2 Tarjeta de cada integrante ----- */
 
 .miembro-card {
   background: var(--color-surface);
@@ -2044,7 +2007,7 @@ ul {
 }
 
 /* ==========================================================
-   18. LOGIN (pantalla para entrar o crear cuenta)
+   17. LOGIN (pantalla para entrar o crear cuenta)
    ========================================================== */
 
 .esperando-login body {
@@ -2291,7 +2254,7 @@ ul {
 }
 
 /* ==========================================================
-   19. USUARIO EN EL HEADER (nombre y botón Salir)
+   18. USUARIO EN EL HEADER (nombre y botón Salir)
    ========================================================== */
 
 .user-box {
