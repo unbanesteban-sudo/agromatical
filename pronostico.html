@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pronóstico — Agromatical</title>
   <link rel="icon" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-auth-compat.js"></script>
@@ -20,8 +18,8 @@
   <header class="site-header">
     <div class="container header-bar">
       <a href="index.html" class="brand">
-        <img src="assets/logo-icono.png" alt="" class="brand-logo">
-        <span class="brand-name">Agromatic<span>al</span></span>
+        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="brand-name"><strong>Agro</strong>matical</span>
       </a>
 
       <button type="button" class="nav-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
@@ -55,6 +53,7 @@
         <div class="pronostico-top">
           <h2 class="section-title pronostico-titulo" id="pronosticoCiudad">Próximos 7 días</h2>
           <div class="search-form">
+            <span class="search-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
             <input type="text" id="citySearchInput" placeholder="Buscar ciudad..." autocomplete="off" onkeypress="teclaBuscador(event)">
             <button type="button" onclick="buscarClima()">Buscar</button>
           </div>
@@ -69,8 +68,8 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <img src="assets/logo-icono.png" alt="" class="brand-logo">
-        <span class="brand-name">Agromatic<span>al</span></span>
+        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="brand-name"><strong>Agro</strong>matical</span>
       </div>
       <p class="footer-tagline">Tecnología que cultiva el futuro</p>
     </div>

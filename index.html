@@ -6,9 +6,7 @@
   <title>Agromatical — Cuidado de invernaderos</title>
   <meta name="description" content="Agromatical, tecnología para cuidar tu invernadero.">
   <link rel="icon" href="assets/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
   <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
@@ -22,8 +20,8 @@
   <header class="site-header">
     <div class="container header-bar">
       <a href="index.html" class="brand">
-        <img src="assets/logo-icono.png" alt="" class="brand-logo">
-        <span class="brand-name">Agromatic<span>al</span></span>
+        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="brand-name"><strong>Agro</strong>matical</span>
       </a>
 
       <button type="button" class="nav-toggle" onclick="toggleMenu()" aria-label="Abrir menú">
@@ -53,6 +51,7 @@
             <p class="hero-lema">Tecnología que cultiva el futuro</p>
           </div>
           <div class="search-form">
+            <span class="search-icono"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
             <input type="text" id="citySearchInput" placeholder="Buscar ciudad..." autocomplete="off" onkeypress="teclaBuscador(event)">
             <button type="button" onclick="buscarClima()">Buscar</button>
           </div>
@@ -70,15 +69,14 @@
             </div>
 
             <div class="weather-details">
-              <div class="weather-detail"><span>Humedad</span><strong><span id="weatherHumedad">--</span>%</strong></div>
-              <div class="weather-detail"><span>Presión</span><strong><span id="weatherPresion">--</span> hPa</strong></div>
-              <div class="weather-detail"><span>Viento</span><strong><span id="weatherViento">--</span> km/h</strong></div>
-              <div class="weather-detail"><span>Lluvia</span><strong><span id="weatherLluvia">--</span> mm</strong></div>
+              <div class="weather-detail"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11z"/></svg><div><span>Humedad</span><strong><span id="weatherHumedad">--</span>%</strong></div></div>
+              <div class="weather-detail"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h8"/></svg><div><span>Viento</span><strong><span id="weatherViento">--</span> km/h</strong></div></div>
+              <div class="weather-detail"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 13l3.5-3.5"/><path d="M8 17.5h8"/></svg><div><span>Presión</span><strong><span id="weatherPresion">--</span> hPa</strong></div></div>
+              <div class="weather-detail"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 15a4 4 0 0 1 .4-8A5.5 5.5 0 0 1 18 8.6a3.3 3.3 0 0 1-.6 6.4"/><path d="M9 18l-1 2.5M13 18l-1 2.5M17 18l-1 2.5"/></svg><div><span>Lluvia</span><strong><span id="weatherLluvia">--</span> mm</strong></div></div>
             </div>
 
             <div class="weather-state">
-              <span id="weatherEstado">Buscando tu ubicación...</span>
-              · Actualizado: <span id="weatherUpdated">--</span>
+              <span id="weatherEstado">Buscando tu ubicación...</span> · <span id="weatherUpdated">--</span>
             </div>
           </div>
 
@@ -91,11 +89,15 @@
 
     <section class="section section-sin-abajo" id="tu-invernadero">
       <div class="container">
-        <h2 class="section-title">Tu invernadero</h2>
+        <h2 class="section-title" id="tituloInvernadero" style="display:none;">Tu invernadero</h2>
 
         <div class="invernadero-cta" id="invernaderoCta">
-          <p>Todavía no creaste tu invernadero. Ponele un nombre, elegí un fondo y contanos qué plantás.</p>
-          <button type="button" onclick="abrirModalInvernadero()">Crear invernadero</button>
+          <svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <div class="cta-texto">
+            <h2>Tu invernadero</h2>
+            <p>Monitoreá el clima, cuidá tus cultivos y llevá tu producción al siguiente nivel.</p>
+          </div>
+          <button type="button" onclick="abrirModalInvernadero()">Crear invernadero &rarr;</button>
         </div>
 
         <div class="invernadero-card" id="invernaderoCard" style="display:none;">
@@ -237,32 +239,20 @@
         <h2 class="section-title">Novedades del proyecto</h2>
         <div class="updates-grid">
           <article class="update-card">
-            <div class="update-card-media"></div>
-            <div class="update-card-body">
-              <time>Etapa 1</time>
-              <h3>Estructura del sitio y diseño base</h3>
-            </div>
+            <time>Etapa 1</time>
+            <h3>Estructura del sitio y diseño base</h3>
           </article>
           <article class="update-card">
-            <div class="update-card-media"></div>
-            <div class="update-card-body">
-              <time>Etapa 2</time>
-              <h3>Conexión con la API de clima (Open-Meteo)</h3>
-            </div>
+            <time>Etapa 2</time>
+            <h3>Conexión con la API de clima (Open-Meteo)</h3>
           </article>
           <article class="update-card">
-            <div class="update-card-media"></div>
-            <div class="update-card-body">
-              <time>Etapa 3</time>
-              <h3>Invernadero, AgrIA y login con Firebase</h3>
-            </div>
+            <time>Etapa 3</time>
+            <h3>Invernadero, AgrIA y login con Firebase</h3>
           </article>
           <article class="update-card">
-            <div class="update-card-media"></div>
-            <div class="update-card-body">
-              <time>Etapa 4</time>
-              <h3>Conexión con el servidor del profe</h3>
-            </div>
+            <time>Etapa 4</time>
+            <h3>Conexión con el servidor del profe</h3>
           </article>
         </div>
       </div>
@@ -272,8 +262,8 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <img src="assets/logo-icono.png" alt="" class="brand-logo">
-        <span class="brand-name">Agromatic<span>al</span></span>
+        <svg class="brand-hoja" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C4 10.5 10 4 20 4c0 9.5-6.5 16-16 16z" fill="#4c8a3f"/><path d="M4.5 19.5L13 11" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span class="brand-name"><strong>Agro</strong>matical</span>
       </div>
       <p class="footer-tagline">Tecnología que cultiva el futuro</p>
     </div>

@@ -170,12 +170,14 @@ function mostrarInvernadero() {
 
   if (!datos) {
     document.getElementById("invernaderoCta").style.display = "";
+    document.getElementById("tituloInvernadero").style.display = "none";
     document.getElementById("invernaderoCard").style.display = "none";
     document.getElementById("chatInvernadero").style.display = "none";
     return;
   }
 
   document.getElementById("invernaderoCta").style.display = "none";
+  document.getElementById("tituloInvernadero").style.display = "";
   document.getElementById("invernaderoCard").style.display = "";
 
   document.getElementById("invernaderoFondo").style.backgroundImage = "url('" + datos.fondo + "')";
