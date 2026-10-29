@@ -1,6 +1,7 @@
 // Lo explica: Godoy
 // Chicos, el mapa lo hacemos con Leaflet (una librería gratis). Los dibujos de las calles
-// son de OpenStreetMap con el estilo clarito de CARTO. Ponemos un pin en la ciudad con su
+// son de OpenStreetMap (gratis y sin clave); en el CSS les bajamos el color para que se vean
+// clarito. Ponemos un pin en la ciudad con su
 // nombre, y el pin cambia de color según la temperatura: azul si hace frío, verde si está
 // templado y rojo si hace calor. Si tocás el pin te dice la temperatura.
 
@@ -42,9 +43,8 @@ function iniciarMapa(idDiv, zoom) {
 
   mapa = L.map(idDiv).setView([UBICACION_INICIAL.lat, UBICACION_INICIAL.lon], zoom);
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; colaboradores de OpenStreetMap",
     maxZoom: 19
   }).addTo(mapa);
 

@@ -411,6 +411,10 @@ ul {
   z-index: 0;
 }
 
+.map-leaflet .leaflet-tile-pane {
+  filter: grayscale(0.7) brightness(1.06) contrast(0.92);
+}
+
 .mapa-pin {
   background: none;
   border: none;
