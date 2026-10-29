@@ -2058,41 +2058,63 @@ ul {
 
 .login-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   min-height: 100vh;
 }
 
 .login-lado-logo {
-  background:
-    linear-gradient(0deg, rgba(14, 24, 15, 0.75) 0%, rgba(14, 24, 15, 0.2) 60%),
-    url("../assets/hero-campo.jpg") center / cover no-repeat,
-    #2c4a2f;
-  display: flex;
-  align-items: flex-end;
-  padding: 48px;
-}
-
-.login-marca {
+  background: linear-gradient(160deg, #1f4a28 0%, #2e6b34 100%);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  padding: 56px 64px;
 }
 
 .login-marca svg {
   background: #fff;
   border-radius: 18px;
   padding: 10px;
-  width: 92px;
-  height: 92px;
+  width: 84px;
+  height: 84px;
 }
 
 .login-marca-nombre {
-  margin: 18px 0 4px;
+  margin: 20px 0 6px;
   font-size: 2.6rem;
 }
 
 .login-marca-lema {
   margin: 0;
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.login-funciones {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 400px;
+}
+
+.login-funciones li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.login-funciones span {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-lado-form {
